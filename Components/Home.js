@@ -75,6 +75,7 @@ export default function Home({navigation}) {
         <Text style={styles.loginText}>LOGIN</Text>
         
       </TouchableOpacity>
+      
     </View>
   );
 }

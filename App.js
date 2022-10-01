@@ -22,12 +22,13 @@ export default function App(props) {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-      <Stack.Screen name="FlatList" component={LearnFlatList}  />
+      
       <Stack.Screen name="Home" component={Home} options={{ title: 'Home' }} />
-        
-        
+      <Stack.Screen name="FlatList" component={LearnFlatList}  />
       </Stack.Navigator>
     </NavigationContainer>
+    
+    
   );
 }
  

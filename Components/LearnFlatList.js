@@ -89,10 +89,15 @@ return (
 
      </View>
 
-     <View style={{flex:0.10, alignItems:'center',justifyContent:'center'}}>
+     <View style={{flex:0.10,flexDirection:"row" ,alignItems:'center',justifyContent:'center'}}>
 
-        <TouchableOpacity style={{width:150, height:40, backgroundColor:'green', alignItems:'center',justifyContent:'center'}}>
-          <Text style={{fontSize:20, color:'white'}}>Testing Button</Text>
+        <TouchableOpacity style={{width:150, height:40,margin:3, backgroundColor:'green', alignItems:'center',justifyContent:'center'}} onPress={() =>
+          navigation.navigate('Home')
+          }>
+          <Text style={{fontSize:20, color:'white'}}>Home</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={{width:150, height:40,margin:3, backgroundColor:'green', alignItems:'center',justifyContent:'center'}}>
+          <Text style={{fontSize:20, color:'white'}}>Signup</Text>
         </TouchableOpacity>
      </View>
 
