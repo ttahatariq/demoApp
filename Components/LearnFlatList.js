@@ -96,8 +96,11 @@ return (
           }>
           <Text style={{fontSize:20, color:'white'}}>Home</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={{width:150, height:40,margin:3, backgroundColor:'green', alignItems:'center',justifyContent:'center'}}>
-          <Text style={{fontSize:20, color:'white'}}>Signup</Text>
+        
+        <TouchableOpacity style={{width:150, height:40,margin:3, backgroundColor:'green', alignItems:'center',justifyContent:'center'}} onPress={() =>
+          navigation.navigate('UserProfileView')
+          }>
+          <Text style={{fontSize:20, color:'white'}}>Profile</Text>
         </TouchableOpacity>
      </View>
 

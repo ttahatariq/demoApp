@@ -15,6 +15,7 @@ import {
 
 import Home from "./Components/Home"; 
 import LearnFlatList from "./Components/LearnFlatList";
+import UserProfileView from "./Components/UserProfileView";
 
 const Stack = createNativeStackNavigator();
 
@@ -25,6 +26,7 @@ export default function App(props) {
       
       <Stack.Screen name="Home" component={Home} options={{ title: 'Home' }} />
       <Stack.Screen name="FlatList" component={LearnFlatList}  />
+      <Stack.Screen name="UserProfileView" component={UserProfileView}  />
       </Stack.Navigator>
     </NavigationContainer>
     
