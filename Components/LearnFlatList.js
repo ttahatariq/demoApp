@@ -9,7 +9,7 @@ const Item = ({ title }) => (
     </View>
   );
 
-export default function LearnFlatList() {
+export default function LearnFlatList({navigation}) {
 
     
   const [data, setData] = useState([
@@ -46,6 +46,7 @@ export default function LearnFlatList() {
   
 return (
     <View style={{flex:1,}}>
+      
       
 
       <View style={{flex:0.90, backgroundColor:'white'}}>
