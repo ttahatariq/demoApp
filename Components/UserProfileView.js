@@ -4,6 +4,7 @@ import {
   Text,
   View,
   Image,
+  TouchableOpacity
 } from 'react-native';
 
 export default class UserProfileView extends Component {
@@ -59,7 +60,9 @@ export default class UserProfileView extends Component {
               </View>
             </View>
 
+            
           </View>
+          
       </View>
     );
   }

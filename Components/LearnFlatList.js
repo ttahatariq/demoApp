@@ -1,6 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { useState } from 'react';
 import { StyleSheet, Text, View, Image, TextInput, TouchableOpacity, FlatList } from 'react-native';
+import { useEffect } from 'react';
 
 
 const Item = ({ title }) => (
@@ -11,7 +12,10 @@ const Item = ({ title }) => (
 
 export default function LearnFlatList({navigation}) {
 
-    
+  const [fonts, setFonts] = useState(global.fs)
+  const [color, setColor] = useState(global.bc)
+
+  
   const [data, setData] = useState([
     {name:'Furqan',
     message:'Hello How are you',
@@ -43,11 +47,24 @@ export default function LearnFlatList({navigation}) {
     }])
   
     
+
+
+    useEffect(() => {
+      console.log('navigation useEffect is =')
+      const unsubscribe = navigation.addListener('focus', () => {
+        // console.log('Called When you are back on LearnFlatList',route.params.ammar)
+         setFonts(global.fs);
+         setColor(global.bc);
+         console.log(global.fs);
+      });
+      return unsubscribe;
+    }, [navigation]);
+    
   
 return (
     <View style={{flex:1,}}>
       
-      
+     
 
       <View style={{flex:0.90, backgroundColor:'white'}}>
 
@@ -57,7 +74,7 @@ return (
             data={data}
             renderItem={
                 ({item}) => (
-                <View style={{backgroundColor:'black', marginBottom:20, }}>
+                <View style={{backgroundColor:color, marginBottom:20, }}>
                   <View style={{flexDirection:'row'}}>
                   <Image 
                     
@@ -66,7 +83,7 @@ return (
                     style={{width:40,height:40,alignItems: 'center',margin:5,borderRadius:5}} 
                     
                     />
-                    <Text style={{fontSize:20, color:'white',fontWeight:'bold'}}> {item.name}</Text>
+                    <Text style={{fontSize:fonts, color:'white',fontWeight:'bold'}}> {item.name}</Text>
                   </View>
                    
                     
@@ -93,17 +110,23 @@ return (
 
      <View style={{flex:0.10,flexDirection:"row" ,alignItems:'center',justifyContent:'center'}}>
 
-        <TouchableOpacity style={{width:150, height:40,margin:3, backgroundColor:'green', alignItems:'center',justifyContent:'center'}} onPress={() =>
+        <TouchableOpacity style={{width:100, height:40,margin:3, backgroundColor:'green', alignItems:'center',justifyContent:'center'}} onPress={() =>
           navigation.navigate('Home')
           }>
-          <Text style={{fontSize:20, color:'white'}}>Home</Text>
+          <Text style={{fontSize:20, color:'white'}}>Login</Text>
         </TouchableOpacity>
         
-        <TouchableOpacity style={{width:150, height:40,margin:3, backgroundColor:'green', alignItems:'center',justifyContent:'center'}} onPress={() =>
+        <TouchableOpacity style={{width:100, height:40,margin:3, backgroundColor:'green', alignItems:'center',justifyContent:'center'}} onPress={() =>
           navigation.navigate('UserProfileView')
           }>
           <Text style={{fontSize:20, color:'white'}}>Profile</Text>
         </TouchableOpacity>
+        <TouchableOpacity style={{width:100, height:40,margin:3, backgroundColor:'green', alignItems:'center',justifyContent:'center'}} onPress={() =>
+          navigation.navigate('SettingsScreen')
+          }>
+          <Text style={{fontSize:20, color:'white'}}>Settings</Text>
+        </TouchableOpacity>
+        
      </View>
 
     </View>
