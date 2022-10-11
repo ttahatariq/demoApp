@@ -18,13 +18,6 @@ export default function SettingsScreen({navigation}) {
  },[]);
 
  const saveSettings=(a)=>{
-  /*  
-    global.setting={
-      fs:100,
-      fc:'yellow',
-      bc:'white'
-    }
-  // console.log('pressed')*/
   global.fs=a;
   navigation.navigate('FlatList')
 }

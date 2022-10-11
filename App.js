@@ -17,6 +17,9 @@ import Home from "./Components/Home";
 import LearnFlatList from "./Components/LearnFlatList";
 import UserProfileView from "./Components/UserProfileView";
 import SettingsScreen from "./Components/SettingsScreen";
+import ChatScreen from "./Components/ChatScreen";
+import Chat from "./Components/Chat";
+import Chat2 from "./Components/Chat2";
 
 const Stack = createNativeStackNavigator();
 
@@ -25,10 +28,13 @@ export default function App(props) {
     <NavigationContainer>
       <Stack.Navigator>
       
+      <Stack.Screen name="Chat2" component={Chat2} options={{ title: 'Chat2' }} />
       <Stack.Screen name="Home" component={Home} options={{ title: 'Home' }} />
       <Stack.Screen name="FlatList" component={LearnFlatList}  />
       <Stack.Screen name="UserProfileView" component={UserProfileView}  />
       <Stack.Screen name="SettingsScreen" component={SettingsScreen}  />
+      <Stack.Screen name="ChatScreen" component={ChatScreen} options={{ title: 'ChatScreen' }} />
+      <Stack.Screen name="Chat" component={Chat} options={{ title: 'Chat' }} />
       </Stack.Navigator>
     </NavigationContainer>
     
