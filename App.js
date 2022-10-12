@@ -20,6 +20,11 @@ import SettingsScreen from "./Components/SettingsScreen";
 import ChatScreen from "./Components/ChatScreen";
 import Chat from "./Components/Chat";
 import Chat2 from "./Components/Chat2";
+import AudioPlay from "./Components/AudioPlay";
+import RecordAudio from "./Components/RecordAudio";
+
+
+
 
 const Stack = createNativeStackNavigator();
 
@@ -27,14 +32,17 @@ export default function App(props) {
   return (
     <NavigationContainer>
       <Stack.Navigator>
+
       
-      <Stack.Screen name="Chat2" component={Chat2} options={{ title: 'Chat2' }} />
       <Stack.Screen name="Home" component={Home} options={{ title: 'Home' }} />
       <Stack.Screen name="FlatList" component={LearnFlatList}  />
       <Stack.Screen name="UserProfileView" component={UserProfileView}  />
       <Stack.Screen name="SettingsScreen" component={SettingsScreen}  />
       <Stack.Screen name="ChatScreen" component={ChatScreen} options={{ title: 'ChatScreen' }} />
       <Stack.Screen name="Chat" component={Chat} options={{ title: 'Chat' }} />
+      <Stack.Screen name="AudioPlay" component={AudioPlay} options={{ title: 'AudioPlay' }} />
+      <Stack.Screen name="Chat2" component={Chat2} options={{ title: 'Chat2' }} />
+      <Stack.Screen name="RecordAudio" component={RecordAudio} options={{ title: 'RecordAudio' }} />
       </Stack.Navigator>
     </NavigationContainer>
     

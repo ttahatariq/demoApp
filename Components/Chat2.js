@@ -25,7 +25,7 @@ export default function Chat2() {
           },
           {
               _id:2,
-              text:"Hellow Taha dunger",
+              text:"Hellow Taha",
               createdAt: new Date(),
               user: {
                   _id:3,
@@ -36,7 +36,7 @@ export default function Chat2() {
           },
           {
               _id:3,
-              text:"Hellow Hammad Snake",
+              text:"Hellow Hammad ",
               createdAt: new Date(),
               user: {
                   _id:2,
@@ -120,7 +120,7 @@ export default function Chat2() {
   }, [])
   return (
       <View style={{flex:1, backgroundColor:"lightgrey"}}>
-          <Text style={{paddingLeft:600,color:"white",fontFamily:"Times New Roman"}}>Welcom to chat screen</Text>
+          <Text style={{paddingLeft:6,color:"white",fontFamily:"Times New Roman"}}>Welcom to chat screen</Text>
            <GiftedChat
           messages={messages}
           onSend={messages => onSend(messages)}

@@ -64,11 +64,26 @@ export default function LearnFlatList({navigation}) {
 return (
     <View style={{flex:1,}}>
 
-  <View style={{alignItems:'center',justifyContent:'center'}}>
+  <View style={{alignItems:'center',justifyContent:'center',flexDirection:"row"}}>
 <TouchableOpacity style={{width:100, height:40,margin:3, backgroundColor:'green', alignItems:'center',justifyContent:'center',borderRadius:10}} onPress={() =>
           navigation.navigate('ChatScreen')
           }>
           <Text style={{fontSize:20, color:'white'}}>CHAT'S</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={{width:100, height:40,margin:3, backgroundColor:'green', alignItems:'center',justifyContent:'center',borderRadius:10}} onPress={() =>
+          navigation.navigate('Chat2')
+          }>
+          <Text style={{fontSize:20, color:'white'}}>CHAT2</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={{width:100, height:40,margin:3, backgroundColor:'green', alignItems:'center',justifyContent:'center',borderRadius:10}} onPress={() =>
+          navigation.navigate('RecordAudio')
+          }>
+          <Text style={{fontSize:20, color:'white'}}>VM</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={{width:100, height:40,margin:3, backgroundColor:'green', alignItems:'center',justifyContent:'center',borderRadius:10}} onPress={() =>
+          navigation.navigate('AudioPlay')
+          }>
+          <Text style={{fontSize:20, color:'white'}}>Play</Text>
         </TouchableOpacity>
         </View>
       
