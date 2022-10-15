@@ -68,17 +68,13 @@ return (
 <TouchableOpacity style={{width:100, height:40,margin:3, backgroundColor:'green', alignItems:'center',justifyContent:'center',borderRadius:10}} onPress={() =>
           navigation.navigate('ChatScreen')
           }>
-          <Text style={{fontSize:20, color:'white'}}>CHAT'S</Text>
+          <Text style={{fontSize:20, color:'white'}}>Text CHAT</Text>
         </TouchableOpacity>
+        
         <TouchableOpacity style={{width:100, height:40,margin:3, backgroundColor:'green', alignItems:'center',justifyContent:'center',borderRadius:10}} onPress={() =>
-          navigation.navigate('Chat2')
+          navigation.navigate('Chat')
           }>
-          <Text style={{fontSize:20, color:'white'}}>CHAT2</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={{width:100, height:40,margin:3, backgroundColor:'green', alignItems:'center',justifyContent:'center',borderRadius:10}} onPress={() =>
-          navigation.navigate('RecordAudio')
-          }>
-          <Text style={{fontSize:20, color:'white'}}>VM</Text>
+          <Text style={{fontSize:20, color:'white'}}>Voice Chat</Text>
         </TouchableOpacity>
         <TouchableOpacity style={{width:100, height:40,margin:3, backgroundColor:'green', alignItems:'center',justifyContent:'center',borderRadius:10}} onPress={() =>
           navigation.navigate('AudioPlay')
@@ -91,7 +87,7 @@ return (
 
       <View style={{flex:0.90, backgroundColor:'white'}}>
 
-        {console.log(data)}
+      
         
         <FlatList
             data={data}

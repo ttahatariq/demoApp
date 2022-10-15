@@ -100,14 +100,14 @@ return (
 
       <View style={{flex:0.90, backgroundColor:'white'}}>
 
-        {console.log(data)}
+        
         
         <FlatList
             data={data}
             renderItem={
                 ({item}) => (
                 <TouchableOpacity style={{backgroundColor:"black", marginBottom:5, }} onPress={() =>
-                    navigation.navigate('Chat')}>
+                    navigation.navigate('Chat2')}>
                     <View style={{flexDirection:'row'}}>
                         <View style={{flexDirection:'row',flex:0.85}}>
                             <Image  

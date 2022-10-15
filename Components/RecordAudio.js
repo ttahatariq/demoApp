@@ -20,6 +20,7 @@ export default function RecordAudio({navigation}) {
       const { recording } = await Audio.Recording.createAsync( Audio.RecordingOptionsPresets.HIGH_QUALITY
       );
       setRecording(recording);
+      
       console.log('Recording started');
     } catch (err) {
       console.error('Failed to start recording', err);
@@ -40,7 +41,7 @@ export default function RecordAudio({navigation}) {
   
 
   return (
-    <View style={styles.container}>
+    
       <View style={{flex:1}}>
     <View style={{flex:0.90}}>
       
@@ -69,7 +70,7 @@ export default function RecordAudio({navigation}) {
     </View>
    </View>
       
-    </View>
+    
   );
 }
 

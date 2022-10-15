@@ -119,8 +119,8 @@ export default function Chat2() {
       setMessages(previousMessages => GiftedChat.append(previousMessages, messages))
   }, [])
   return (
-      <View style={{flex:1, backgroundColor:"lightgrey"}}>
-          <Text style={{paddingLeft:6,color:"white",fontFamily:"Times New Roman"}}>Welcom to chat screen</Text>
+      <View style={{flex:1, backgroundColor:"black"}}>
+          <Text style={{paddingLeft:6,color:"white"}}>Welcom to chat screen</Text>
            <GiftedChat
           messages={messages}
           onSend={messages => onSend(messages)}
