@@ -80,7 +80,7 @@ export default function Chat({navigation}) {
           <Text style={styles.fill}> -------- {recordingLine.duration}</Text>
           <TouchableOpacity style={styles.button} onPress={() => recordingLine.sound.replayAsync()} title="Play">
            <Icon name="play" size={30} color="#900" />
-          </TouchableOpacity>
+          </TouchableOpacity> 
          
         </View>
       );
@@ -105,7 +105,7 @@ export default function Chat({navigation}) {
       </View>
     
     <View style={{flex:0.10}}>
-    <Button
+    <Button 
       //  messages={messages}
         title={recording ? 'Stop Recording' : 'Start Recording'}
         onPress={recording ? stopRecording : startRecording}

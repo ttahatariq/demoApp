@@ -70,7 +70,7 @@ export default function Home({navigation}) {
       
  
       <TouchableOpacity style={styles.loginBtn} onPress={() =>
-          navigation.navigate('FlatList')
+          navigation.replace('FlatList')
           }>
         <Text style={styles.loginText}>LOGIN</Text>
         

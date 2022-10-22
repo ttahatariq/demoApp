@@ -86,7 +86,11 @@ return (
      
 
       <View style={{flex:0.90, backgroundColor:'white'}}>
-
+      <TouchableOpacity style={{width:100, height:40,margin:3, backgroundColor:'green', alignItems:'center',justifyContent:'center',borderRadius:10}} onPress={() =>
+          navigation.navigate('LanguagesScreen')
+          }>
+          <Text style={{fontSize:20, color:'white'}}>Hooks</Text>
+        </TouchableOpacity>
       
         
         <FlatList
